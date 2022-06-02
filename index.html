@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Cheat Sheet</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Git Cheat Sheet</h1>
+    </header>
+    <main>
+        <section>
+            <h2>What is Git?</h2>
+            <p>Git is the free and open source distributed version control system that's responsible for everything GitHub related that happens locally on your computer. This cheat sheet features the most important and commonly used Git commands for easy reference.</p>
+        </section>
+        <div id="grid">
+        <section>
+            <details>
+                <summary>Setup</summary>
+                <p>Configuring user information used across all local repositories.</p>
+                <dl>
+                    <dt><code>git config --global user.name “[firstname lastname]”</code></dt>
+                    <dd>set a name that is identifiable for credit when review version history</dd>
+
+                    <dt><code>git config --global user.email “[valid-email]”</code></dt>
+                    <dd>set an email address that will be associated with each history marker</dd>
+
+                    <dt><code>git config --global color.ui auto</code></dt>
+                    <dd>set automatic command line coloring for Git for easy reviewing</dd>
+
+                </dl>
+
+            </details>
+        </section>
+
+        <section>
+            <details>
+                <summary>Setup & Init</summary>
+                <p>Configuring user information, initializing and cloning repositories.</p>
+                <dl>
+                    <dt><code>git init</code></dt>
+                    <dd>initialize an existing directory as a Git repository</dd>
+
+                    <dt><code>git clone [url]</code></dt>
+                    <dd>retrieve an entire repository from a hosted location via URL</dd>
+
+                </dl>
+
+            </details>
+        </section>
+
+        <section>
+            <details>
+                <summary>Stage & Snapshot</summary>
+                <p>Working with snapshots and the Git staging area.</p>
+                <dl>
+                    <dt><code>git status</code></dt>
+                    <dd>show modified files in working directory, staged for your next commit</dd>
+
+                    <dt><code>git add [file]</code></dt>
+                    <dd>add a file as it looks now to your next commit (stage)</dd>
+
+                    <dt><code>git reset [file]</code></dt>
+                    <dd>unstage a file while retaining the changes in working directory</dd>
+
+                    <dt><code>git diff</code></dt>
+                    <dd>diff of what is changed but not staged</dd>
+
+                    <dt><code>git diff --staged</code></dt>
+                    <dd>diff of what is staged but not yet commited</dd>
+
+                    <dt><code>git commit -m “[descriptive message]”</code></dt>
+                    <dd>commit your staged content as a new commit snapshot</dd>
+
+                </dl>
+
+            </details>
+        </section>
+
+        <section>
+            <details>
+                <summary>Branch & Merge</summary>
+                <p>Isolating work in branches, changing context, and integrating changes.</p>
+                <dl>
+                    <dt><code>git branch</code></dt>
+                    <dd>list your branches. a * will appear next to the currently active branch</dd>
+
+                    <dt><code>git branch [branch-name]</code></dt>
+                    <dd>create a new branch at the current commit</dd>
+
+                    <dt><code>git checkout</code></dt>
+                    <dd>switch to another branch and check it out into your working directory</dd>
+
+                    <dt><code>git merge [branch]</code></dt>
+                    <dd>merge the specified branch's history into the current one</dd>
+
+                    <dt><code>git log</code></dt>
+                    <dd>show all commits in the current branch's history</dd>
+
+
+                </dl>
+
+            </details>
+        </section>
+
+        <section>
+            <details>
+                <summary>Inspect & Compare</summary>
+                <p>Examining logs, diffs and object information.</p>
+                <dl>
+                    <dt><code>git log</code></dt>
+                    <dd>show the commit history for the currently active branch</dd>
+
+                    <dt><code>git log branchB..branchA</code></dt>
+                    <dd>show the commits on branchA that are not on branchB</dd>
+
+                    <dt><code>git log --follow [file]</code></dt>
+                    <dd>show the commits that changed file, even across renames</dd>
+
+                    <dt><code>git diff branchB...branchA</code></dt>
+                    <dd>show the diff of what is in branchA that is not in branchB</dd>
+
+                </dl>
+
+            </details>
+        </section>
+
+        <section>
+            <details>
+                <summary>Share & Update</summary>
+                <p>Retrieving updates from another repository and updating local repos.</p>
+                <dl>
+                    <dt><code>git remote add [alias] [url]</code></dt>
+                    <dd>add a git URL as an alias</dd>
+
+                    <dt><code>git fetch [alias]</code></dt>
+                    <dd>fetch down all the branches from that Git remote</dd>
+
+                    <dt><code>git merge [alias]/[branch]</code></dt>
+                    <dd>merge a remote branch into your current branch to bring it up to date</dd>
+
+                    <dt><code>git push [alias] [branch]</code></dt>
+                    <dd>Transmit local branch commits to the remote repository branch</dd>
+
+                    <dt><code>git pull</code></dt>
+                    <dd>fetch and merge any commits from the tracking remote branch</dd>
+
+
+                </dl>
+
+            </details>
+        </section>
+    </div>
+    </main>
+    <footer>
+
+<p>Adapted from Git Cheat Sheet by GitHub Education</p>
+    </footer>
+</body>
+</html>
